@@ -1,0 +1,96 @@
+<script type="text/javascript">
+    function copiar(copy, paste){
+        var copy = document.getElementById(copy).value;
+        document.getElementById(paste).value = copy;
+        valinum('precio','entero',true);
+    }
+    </script>
+    <form name="form1" method="post" action="">
+     
+    <input id="copy" type="text" name="titulo" autocomplete="off"
+    value="" size="72" onKeyDown="copiar('copy','paste');"/>
+    <br>
+    <input id="paste" type="text" name="seo" value="" size="72" />
+     
+    </form>
+
+    <input type="submit" value="Enviar " class="enviar" name="encripta" onclick=visualiza()> 
+
+
+
+    function visualiza(){
+              
+        /*
+      mensage = document.querySelector(".encriptado").value;
+     
+      mensage2 = document.querySelector(".desencriptado").value;
+      alert("este es el mensage   " +  mensage2);
+      */
+      alert(mensage2);
+    }
+
+    /*
+    function quitacoma(){
+        var contador=0;
+        var caracter = ',';
+        var frase;
+        for(contador=0; contador<=mensage2.length; contador++)
+        {
+            if(mensaje2[contador]== ',')
+            {
+                
+            }
+            else{
+                mensage3.push(mensage2[contador]);
+            }
+
+        }
+        alert(" esta es la frase  "+ mensage3);
+
+    }
+    */
+
+
+    letra = letra+mensage2[contador+2];
+                    letra = letra+mensage2[contador+3];
+
+                    // imes, over ufat
+                    if(letra == clave[2] && bandera==0){ 
+                    mensage3=mensage3+clave[2];
+                    
+                    bandera=1;
+                    contador=contador+3;
+                    }
+
+                    if(letra == clave[3] && bandera==0){ 
+                    mensage3=mensage3+clave[3];
+                    
+                    bandera=1;
+                    contador=contador+3;
+                    }
+                    if(letra == clave[4] && bandera==0){ 
+                    mensage3=mensage3+clave[4];
+                    
+                    bandera=1;
+                    contador=contador+3;
+                    }
+
+                    letra = letra+mensage2[contador+4];
+                    console.log(letra);
+                    if(letra == clave[1] && bandera==0){ 
+                    mensage3=mensage3+clave[1];
+                    
+                    bandera=1;
+                    contador=contador+4;
+                    }
+
+                    if(bandera==1){
+                        mensage3=mensage3+mensage2[contador];
+                    }
+                    console.log(mensage3,mensage2[contador]);
+
+
+                    <div id="logo">
+                        <p class="logo_a">a</p>
+                    </div>
+                    

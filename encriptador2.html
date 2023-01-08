@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es-419">
+    <head>
+        <meta charset="UTF-8">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/index.css">
+        <title>Decodificador pruebas</title>
+    </head>
+
+
+    <body>
+        <div id="vector">
+            <img src="imagenes/Vector.png" alt="">
+        </div>
+        
+        
+        <div class="cuerpo">
+                        
+        <textarea  name="comentario" class="encriptado"   placeholder=" aqui tu texto a encriptar" ></textarea>
+
+         <textarea  name="Encriptado"  class="desencriptado" placeholder="   aqui tu texto ya encriptado"></textarea>
+        
+       <br>
+       
+
+
+       
+        
+        <div id="leyendas">
+        <img src="imagenes/Vectorex.png" alt="exclamacion " class="img_exclama">
+        <p class="leyen"> Solo letras minusculas y sin acentos</p>
+         </div>
+    <div id="botones">
+        <button class="btn_encripta"> Encriptar</button>
+        <button class="btn_desencripta"> Desencriptar</button>
+        <button  type="reset" class="btn_copia"> Copiar</button>
+    </div>
+    </body>
+</div>
+        <script>
+                var clave = ['ai','enter','imes','ober','ufat'];
+                var mensage = [];
+                var mensage2= [];
+                var mensage3= [];
+                
+
+           
+                
+            
+
+            function encripta(){
+                
+                var recorre=0;
+                mensage = " ";
+                
+                mensage = document.querySelector(".encriptado").value;
+                for(recorre = 0; recorre< mensage.length; recorre++)
+                {
+                    
+                    bandera=0;
+                    if(mensage[recorre]== "a"){
+                        mensage2= mensage2+"ai"; bandera=1;}
+                        
+
+                    if(mensage[recorre]== "e"){
+                        mensage2= mensage2+"enter"; bandera=1;}
+                        
+                    
+                    if(mensage[recorre]== "i"){
+                        mensage2= mensage2+"imes"; bandera=1;}
+                        
+                    
+                    if(mensage[recorre]== "o"){
+                        mensage2= mensage2+"ober"; bandera=1;}
+                        //mensage2.push("ober");bandera=1;}
+                    
+                    if(mensage[recorre]== "u"){
+                        mensage2= mensage2+"ufat"; bandera=1;}
+                        //mensage2.push("ufat");bandera=1;}
+
+                    if(bandera==0){
+                        mensage2= mensage2+mensage[recorre]; bandera=1;}
+                        //mensage2.push(letra); }
+            
+                } // cierra for encriptador xD
+
+                //control de lo que se introduce y lo que arroja el compilador
+               // alert(mensage + "  " + mensage.length);
+                // alert(mensage2+"  " + mensage2.length);
+                
+                // le pasamos toda la cadena al elemento
+                document.querySelector(".desencriptado").value = mensage2;
+                document.querySelector(".encriptado").value = " ";
+                
+            } // cierra funcion encriptar
+        
+
+
+            function desencripta(){
+                mensage2 = "";
+                mensage2 = document.querySelector(".desencriptado").value;
+               // alert(mensage2+"  " + mensage2.length);
+               // alert("esta es clave 1  " + clave[0] + "  :esta es clave 2  "+ clave[2]);
+                var contador=0;
+                var letra;
+                var bandera=0;
+                while( contador<=mensage2.length)
+                {
+                    letra="";
+                    //usando fuerza bruta jejeje
+                   letra = letra+mensage2[contador];
+            console.log(" primera letra  "+letra)
+                   letra = letra+mensage2[contador+1];
+                   if(mensage2[contador]!= undefined)
+                   {
+                        console.log(" segunda letra  "+letra)
+                            // ai
+                            if(letra == clave[0] && bandera==0){ 
+                                mensage3=mensage3+"a";
+                                
+                                bandera=1;
+                                contador=contador+1;
+                            }
+                            
+                            letra = letra+mensage2[contador+2];
+                            letra = letra+mensage2[contador+3];
+
+                             // i= imes
+                             if(letra == clave[2] && bandera==0){ 
+                                mensage3=mensage3+"i";
+                                
+                                bandera=1;
+                                contador=contador+3;
+                            }
+
+                            // o = ober
+                            if(letra == clave[3] && bandera==0){ 
+                                mensage3=mensage3+"o";
+                                
+                                bandera=1;
+                                contador=contador+3;
+                            }
+
+                            // u = ufat
+                            if(letra == clave[4] && bandera==0){ 
+                                mensage3=mensage3+"u";
+                                
+                                bandera=1;
+                                contador=contador+3;
+                            }
+
+                            letra = letra+mensage2[contador+4];
+                            // e = enter
+                            if(letra == clave[1] && bandera==0){ 
+                                mensage3=mensage3+"e";
+                                
+                                bandera=1;
+                                contador=contador+4;
+                            }
+
+                            if(bandera==0){
+                                    mensage3=mensage3+mensage2[contador];
+                                
+                                }
+
+                                if(contador == 350){break;}
+                    }   // cierra el if de control undefined 
+                    
+                 console.log(contador);
+                 contador++;
+                   bandera=0;
+                } // cierra while clave = ['ai','enter','imes','ober','ufat'];
+               
+              //  alert(contador + " esta es la frase desencriptada :  "+ mensage3);
+
+                document.querySelector(".desencriptado").value = " ";
+                document.querySelector(".encriptado").value = mensage3;
+                
+
+            } // cierra funcion
+
+
+            var botones= document.querySelector("button");
+	        botones.onclick = encripta;
+
+            var botones2= document.querySelector(".btn_desencripta");
+	        botones2.onclick = desencripta;
+
+           
+            
+
+        </script>
+<footer>
+<div class="pie">
+    <p>Creado por : Leonard Yadin Moreno Galvez Diciembre 2022</p>
+
+</div>
+</footer>
+
+</html>

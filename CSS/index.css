@@ -1,0 +1,183 @@
+
+.cuerpo{
+
+    width: 90%;
+    height: 550px;
+    align-items: center;
+    background-color: aliceblue;
+    margin-left: auto;
+    margin-right: auto;
+}
+#vector{
+    position: absolute;
+    top: 15px;
+    left: 95px;
+}
+
+.logo_a{
+   
+    
+    font-size: 60px;
+    color:  rgba(10, 56, 113, 1);
+
+}
+
+#logo{
+
+    position: absolute;
+    top: 0px;
+    left: 75px;
+
+}
+
+
+.encriptado{
+    text-transform: lowercase;
+    position:relative;
+    width: 480px;
+    height: 288px;
+    left: 40px;
+    top: 80px;
+
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    /* or 48px */
+    text-align: center;
+    
+    
+    background-color: rgb(233, 241, 248);
+    border: 0px;
+    
+}
+.desencriptado{
+    text-transform: lowercasre;
+    position:absolute;
+    height: 400px;
+    width: 320px;
+    left: 620px;
+    top: 15px;
+    border-radius: 32px;
+    
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    
+    background: #FFFFFF;
+    border: 0px;
+    text-align: center;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    /* or 48px */
+    text-align: center;
+
+
+}
+
+.img_exclama, .leyen{
+    display: inline;
+     
+}
+
+#leyendas{
+    position:absolute;
+    top: 399px;
+    left: 250px;
+}
+
+
+.btn_encripta{
+position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+
+
+    height: 62px;
+    width: 190px;
+    left: 0px;
+    top: 0px;
+    border-radius: 24px;
+    padding: 18px;
+color: #FFFFFF;
+
+background: rgba(10, 56, 113, 1);
+
+}
+
+.btn_desencripta{
+
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+
+
+height: 62px;
+width: 190px;
+left: 20px;
+top: 0px;
+border-radius: 24px;
+padding: 18px;
+color: #FFFFFF;
+
+background: rgb(204, 210, 218);
+
+}
+
+.btn_copia{
+
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+
+
+height: 62px;
+width: 190px;
+left: 20px;
+top: 0px;
+border-radius: 24px;
+padding: 18px;
+color: #8d8585;
+
+background: rgb(192, 213, 228);
+
+   
+
+}
+
+
+
+#botones{
+    display: block;
+    position: absolute;
+    top: 420px;
+    left: 250px;
+
+}
+
+footer{
+    position:absolute;
+    top: 85%;
+    left: 5.5%;
+    width: 89%;
+    height: 500px;
+    
+    font-size: 14px;
+}
+
+.pie{
+    display:block; 
+    width:100%; 
+    margin:0; 
+    text-align:left;
+    padding:20px 0;
+    background: #8d8585;
+   /* #copyright{padding:20px 0;}  */
+}
