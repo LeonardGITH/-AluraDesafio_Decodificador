@@ -17,9 +17,9 @@
         
         <div class="cuerpo">
                         
-        <textarea  name="comentario" class="encriptado"   placeholder=" aqui tu texto a encriptar" ></textarea>
+        <textarea  name="comentario" class="encriptado"   placeholder=" aqui texto a encriptar" ></textarea>
 
-         <textarea  name="Encriptado"  class="desencriptado" placeholder="   aqui tu texto ya encriptado"></textarea>
+         <textarea  name="Encriptado"  class="desencriptado" placeholder="   aqui el texto ya encriptado"></textarea>
         
        <br>
        
@@ -34,7 +34,11 @@
     <div id="botones">
         <button class="btn_encripta"> Encriptar</button>
         <button class="btn_desencripta"> Desencriptar</button>
-        <button  type="reset" class="btn_copia"> Copiar</button>
+        
+    </div>
+
+    <div id="btn_copy_flotante">
+        <button  id="btn_copia" class="btn_copias" > <img width="200px" height="35px"    src="imagenes/btn_copy.png" alt="" class="img_btn_copy"></button>
     </div>
     </body>
 </div>
@@ -43,10 +47,7 @@
                 var mensage = [];
                 var mensage2= [];
                 var mensage3= [];
-                
-
-           
-                
+                           
             
 
             function encripta(){
@@ -82,7 +83,7 @@
                     if(bandera==0){
                         mensage2= mensage2+mensage[recorre]; bandera=1;}
                         //mensage2.push(letra); }
-            
+            console.log(mensage2);
                 } // cierra for encriptador xD
 
                 //control de lo que se introduce y lo que arroja el compilador
@@ -91,7 +92,7 @@
                 
                 // le pasamos toda la cadena al elemento
                 document.querySelector(".desencriptado").value = mensage2;
-                document.querySelector(".encriptado").value = " ";
+                document.querySelector(".encriptado").value = "";
                 
             } // cierra funcion encriptar
         
@@ -174,18 +175,31 @@
                
               //  alert(contador + " esta es la frase desencriptada :  "+ mensage3);
 
-                document.querySelector(".desencriptado").value = " ";
+                document.querySelector(".desencriptado").value = "";
                 document.querySelector(".encriptado").value = mensage3;
-                
+                mensage2 = "";
+                mensage3 = "";
 
             } // cierra funcion
 
+            function copy() {
+            let copyText = document.querySelector(".desencriptado");
+            copyText.select();
+              document.execCommand("copy");
+            }
 
+
+
+
+            
+            document.querySelector("#btn_copia").addEventListener("click", copy);
             var botones= document.querySelector("button");
 	        botones.onclick = encripta;
 
             var botones2= document.querySelector(".btn_desencripta");
 	        botones2.onclick = desencripta;
+
+            
 
            
             

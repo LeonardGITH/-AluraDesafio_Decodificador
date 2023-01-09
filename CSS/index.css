@@ -1,7 +1,7 @@
 
 .cuerpo{
 
-    width: 90%;
+    width: 65%;
     height: 550px;
     align-items: center;
     background-color: aliceblue;
@@ -11,7 +11,7 @@
 #vector{
     position: absolute;
     top: 15px;
-    left: 95px;
+    left: 20%;
 }
 
 .logo_a{
@@ -26,7 +26,7 @@
 
     position: absolute;
     top: 0px;
-    left: 75px;
+    left: 25%;
 
 }
 
@@ -58,7 +58,7 @@
     position:absolute;
     height: 400px;
     width: 320px;
-    left: 620px;
+    left: 55%;
     top: 15px;
     border-radius: 32px;
     
@@ -130,27 +130,7 @@ background: rgb(204, 210, 218);
 
 }
 
-.btn_copia{
 
-    position: relative;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-
-
-height: 62px;
-width: 190px;
-left: 20px;
-top: 0px;
-border-radius: 24px;
-padding: 18px;
-color: #8d8585;
-
-background: rgb(192, 213, 228);
-
-   
-
-}
 
 
 
@@ -161,13 +141,60 @@ background: rgb(192, 213, 228);
     left: 250px;
 
 }
+#btn_copy_flotante{
+ 
+    position: absolute;
+    width: 69px;
+    height: 67px;
+    left: 787px;
+    top: 357px
+
+}
+
+/*
+.btn_copia{
+
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+
+
+        height: 92px;
+        width: 70px;
+        left: 20px;
+        top: 0px;
+        border-radius: 24px;
+        padding: 18px;
+        color: #8d8585;
+
+        background: rgb(192, 213, 228);
+
+   
+
+}
+
+#botones img{
+    display:flex;
+    position: absolute;
+    top: 420px;
+    left: 250px;
+}
+
+.img_btn_copy{
+    height: 60px;
+        width: 120px;
+    top: 0px;
+}
+
+*/
 
 footer{
     position:absolute;
-    top: 85%;
-    left: 5.5%;
-    width: 89%;
-    height: 500px;
+    top: 86%;
+    left: 17.6%;
+    width: 65%;
+    height: 550px;
     
     font-size: 14px;
 }
